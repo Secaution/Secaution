@@ -1,4 +1,4 @@
-### This is a first web scraping draft ###
+### This is a web scraping script ###
 
 from bs4 import BeautifulSoup
 import requests
@@ -10,5 +10,5 @@ page = requests.get(url)
 soup = BeautifulSoup(page.content, "html.parser")
 result = soup.find(id="cmpbox2")
 
-print("Heutiges Datum (Jahr-Monat-Tag):", today)
-print("Neuinfektionen Corona heute in Deutschland:", result)
+print("Current date (Year-Month-Day):", today)
+print("Daily new Covid cases in Germany:", result)
